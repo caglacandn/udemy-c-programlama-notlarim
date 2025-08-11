@@ -1,0 +1,44 @@
+/*
+Klavyeden girilen bir N sayisindan baslayarak asagi yonde azalaacak sekilde ekrana yildiz basan
+C programini recursive fonksiyon yardimiyla yaziniz.
+* * * * *
+* * * *
+* * *
+* *
+*
+
+*/
+#include<stdio.h>
+#include<stdlib.h>
+void yildiz(int limit)
+{
+	int i;
+	if(limit <= 0)
+	{
+		exit(0);
+	}
+	else
+	{
+		for(i=0; i<limit; i++)
+		{
+			printf(" *");
+		}
+		
+		printf("\n");
+		
+		yildiz(limit-1);
+	}
+}
+
+int main()
+{
+	int ust;
+	printf("Lutfen ust sinir yildiz sayisini giriniz: ");
+	scanf("%d",&ust);
+	
+	printf("\n\n");
+	
+	yildiz(ust);
+	
+	return 0;
+}
